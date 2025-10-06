@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onchange</title>
+</head>
+
+<body>
+    <form>
+        <select id="fruits" onchange="changefunc();">
+            <option value="">selct fruit</option>
+            <option value="banana">banana</option>
+            <option value="apple">Apple</option>
+            <option value="mango">mango</option>
+        </select>
+    </form>
+    <p id="demo">
+
+    </p>
+    <script>
+        function changefunc() {
+            let fruit = document.getElementById("fruits").value;
+            document.getElementById("demo").innerHTML = "you selected " + fruit;
+        }
+    </script>
+</body>
+
+</html>

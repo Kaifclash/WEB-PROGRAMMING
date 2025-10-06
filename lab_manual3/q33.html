@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label>enter first string:</label><br>
+        <input type="text" id="f1"><br>
+        <label>enter second string:</label><br>
+        <input type="text" id="f2"><br>
+        <button onclick="check();">check</button>
+    </form>
+    <script>
+        function check() {
+
+            let f1 = document.getElementById("f1").value;
+            let f2 = document.getElementById("f2").value;
+            if (f1 > f2) {
+                alert("string first is longer " + f1);
+            } else {
+                alert("string second is longer " + f2);
+            }
+        }
+    </script>
+</body>
+
+</html>

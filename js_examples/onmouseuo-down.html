@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onmouse up and down</title>
+</head>
+
+<body>
+    <button onmousedown="downfunc();" onmouseup="upfunc();">press me</button>
+    <p id="demo"></p>
+    <script>
+        function downfunc() {
+            document.getElementById("demo").innerHTML = "mouse press down";
+        }
+
+        function upfunc() {
+            document.getElementById("demo").innerHTML = "mouse released";
+        }
+    </script>
+</body>
+
+</html>

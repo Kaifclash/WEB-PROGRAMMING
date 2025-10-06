@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rxample of mouse event move,over,out</title>
+    <style>
+        #d1 {
+            height: 200px;
+            width: 200px;
+            border: solid blue 1px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            position: relative;
+            align-items: center;
+        }
+        
+        #d2 {
+            border: solid green 1px;
+            height: 200px;
+            width: 200px;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            position: relative;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1" onmousemove="movefunc();">
+        move mouse her
+
+    </div>
+    <p id="demo"></p>
+    <div id="d2" onmouseover="overfunc();" onmouseout="outfunc();">
+        hover mouse here....
+    </div>
+    <p id="demo2"></p>
+    <script>
+        function movefunc() {
+            document.getElementById("demo").innerHTML = "mouse is moving inside the box";
+        }
+
+        function overfunc() {
+            document.getElementById("demo2").innerHTML = "mouse enter the green  box";
+        }
+
+        function outfunc() {
+            document.getElementById("demo2").innerHTML = "mouse left the box";
+        }
+    </script>
+</body>
+
+</html>

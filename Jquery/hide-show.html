@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+
+    <p>hello guys i am kaifclash !!</p>
+
+    <p>welocme to mmy yard!!</p>
+
+    <button>hide all msg </button>
+
+    <button id="btn">show last msg</button>
+
+
+
+
+    <script>
+        $(document).ready(function() {
+            //using all p element
+            $("button").click(function() {
+                $("p").hide();
+            });
+
+            //using p:last selector
+            $("#btn").dblclick(function() {
+                $("p:last").show();
+
+            });
+
+
+        });
+    </script>
+
+
+</body>
+
+</html>
