@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <label>Enter number to check :</label><br>
+        <input type="number" id="num1"> <br>
+
+        <!-- opration? -->
+        <input type="radio" name="opration" id="negpos" value="negpos">Check number positive or negative: <br>
+        <input type="radio" name="opration" id="oddeven" value="oddeven">Check number is odd or even <br>
+        <input type="radio" name="opration" id="prime" value="prime">Check number is prime or not<br>
+        <input type="radio" name="opration" id="fact" value="fact">Find the factorial of the number <br>
+        <input type="radio" name="opration" id="square" value="square">Find the square of the number<br>
+        <input type="radio" name="opration" id="power" value="power"> Find the power of the number<br>
+        <input type="radio" name="opration" id="summodd" value="sumodd">Find the sum of all odd numbers between 1 to x<br>
+        <input type="radio" name="opration" id="sumeven" value="summeven">Find the sum of all even numbers between 1 to x<br>
+        <button onclick="performop(event);">check</button><br>
+        <br>
+        <p id="result"></p>
+    </form>
+
+    <script>
+        function performop(event) {
+            event.preventDefault();
+            let n = parseInt(document.getElementById("num1").value);
+            let opration = document.querySelector('input[name="opration"]:checked');
+            let result = "";
+            switch (opration.value) {
+                case "negpos":
+                    result = n > 0 ? "positive" : "negative";
+                    break;
+
+                case "oddeven":
+                    result = (n % 2 == 0) ? "even" : "odd";
+                    break;
+
+                case "prime":
+                    if (n < 2) {
+                        result = "Not Prime";
+                    } else {
+                        let isPrime = true;
+                        for (let i = 2; i <= Math.sqrt(n); i++) {
+                            if (n % i === 0) {
+                                isPrime = false;
+                                break;
+                            }
+                        }
+                        result = isPrime ? "Prime" : "Not Prime";
+                    }
+                    break;
+                case "fact":
+                    let facto = 1;
+                    for (let i = 1; i <= n; i++) {
+                        facto *= i;
+                    }
+                    result = facto;
+                    break;
+
+                case "square":
+                    result = n * n;
+                    break;
+
+                case "power":
+                    result = Math.pow(n, 2);
+
+                    break;
+
+                case "sumodd":
+                    let count = 0;
+                    for (let i = 1; i <= n; i += 2) {
+                        count += i;
+                    }
+                    result = count;
+                    break;
+                case "summeven":
+                    let sums = 0;
+                    for (let i = 2; i <= n; i += 2) {
+                        sums += i;
+                    }
+                    result = sums;
+                    break;
+
+            }
+            document.getElementById("result").innerText = result;
+
+
+        }
+    </script>
+</body>
+
+</html>

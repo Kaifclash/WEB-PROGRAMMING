@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadratic Equation</title>
+</head>
+
+<body>
+    <form action="#" onsubmit="quad(); return false;">
+        <label>Enter the value of a :</label><br>
+        <input type="number" id="a" name="a"><br>
+        <label>Enter the value of b :</label><br>
+        <input type="number" id="b" name="b"><br>
+        <label>Enter the value of c :</label><br>
+        <input type="number" id="c" name="c"><br>
+        <label>Enter the value of x :</label><br>
+        <input type="number" id="x" name="x"><br><br>
+        <input type="submit" value="Submit" name="submit">
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function quad() {
+            const a = parseFloat(document.getElementById("a").value);
+            const b = parseFloat(document.getElementById("b").value);
+            const c = parseFloat(document.getElementById("c").value);
+            const x = parseFloat(document.getElementById("x").value);
+
+            // Correct formula: ax^2 + bx + c
+            const result = a * x * x + b * x + c;
+
+            // Show result in a paragraph instead of using document.write()
+            document.getElementById("result").innerText = `Result: ${result}`;
+        }
+    </script>
+</body>
+
+</html>

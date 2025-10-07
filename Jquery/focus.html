@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("input").focus(function(){
+                $(this).css("background-color","red");
+            });
+            $("input").blur(function(){
+                $(this).css("background-color","yellow");
+            });
+            
+        });
+    </script>
+    <style>
+        div{
+            text-align: center;
+            justify-content: center;
+            display: flex;
+            position: relative;
+            align-items: center;
+            margin-left: 490px;
+            margin-top: 150px;
+            color:white;
+            border: 2px solid black;
+            height: 250px;
+            width: 350px;
+            border-radius: 15px;
+            /* background-color: rgb(82, 131, 17); */
+            box-shadow: 10px 10px 10px 2px red ;
+        }
+        button{
+            background-color:white;
+            color:black;
+            border-radius: 10px;
+        }
+        body{
+            background-image: url("img1.jpg");
+            
+        }
+        input{
+            border-radius: 15px;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        
+        <form>
+        <h2>LOGIN</h2>
+
+        Enter name:<input type="text" id="txt1"><br><br>
+        Enter pass:<input type="text" id="txt2"><br><br>
+        <button>Submit</button>
+    </form>
+</div>
+</body>
+</html>

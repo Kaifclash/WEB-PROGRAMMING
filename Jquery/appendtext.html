@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+       function addtext(){
+        var txt1="<p>using element</p>";
+        var txt2=$("<p></p>").text("using jquery");
+        var txt3=document.createElement("p");
+        txt3.innerHTML="using DOM";
+        $("body").append(txt1,txt2,txt3);
+       }
+
+    </script>
+    
+</head>
+<body>
+    <p>welcome to my page</p>
+    <button id="btn" onclick="addtext();">click to add text</button>
+    
+</body>
+</html>

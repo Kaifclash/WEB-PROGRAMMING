@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toggle Border</title>
+<script src="jquery-3.7.1.min.js"></script>
+<script>
+$(document).ready(function() {
+    $("#d2").click(function() {
+        if ($(this).css("border-style") === "none") {
+            $(this).css("border", "2px solid black"); // show border
+        } else {
+            $(this).css("border", "none"); // hide border
+        }
+    });
+});
+
+
+</script>
+<style>
+    #d2 {
+        width: 120px;
+        height: 120px;
+        background-color: red;
+        border: 2px solid black;
+        transition: 0.3s;
+    }
+    .noborder {
+        border: none;
+    }
+</style>
+</head>
+<body>
+<div id="d2">
+
+</div>
+
+</body>
+</html>

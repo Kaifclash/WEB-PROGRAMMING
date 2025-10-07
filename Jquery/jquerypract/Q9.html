@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #javascript,#jquery,#php{
+            background-color: red;
+            height: 120px;
+            width: 120px;
+        }
+        body{
+            
+            margin-left: 550px;
+            
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#js").click(function(){
+                $("#javascript").toggle("slow");
+            });
+
+
+              $("#jq").click(function(){
+                $("#jquery").toggle("slow");
+            });
+
+
+              $("#p").click(function(){
+                $("#php").toggle("slow");
+            });
+            
+
+        });
+    </script>
+</head>
+<body>
+    <div id="javascript">
+
+    </div><br><br>
+    <div id="jquery">
+
+    </div><br><br>
+    <div id="php">
+
+    </div><br><br>
+    <button id="js">hide and show</button> 
+    <button id="jq">hide and show</button>
+    <button id="p">hide and show</button> 
+</body>
+</html>

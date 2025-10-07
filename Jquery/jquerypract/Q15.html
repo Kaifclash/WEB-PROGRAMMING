@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let tempt=$("#msg").text();
+            $("#btn").click(function(){
+
+           
+            $("#msg").text($("#msg1").text());
+            $("#msg1").text(tempt);
+             });
+        });
+    </script>
+</head>
+<body>
+    <p id="msg">this is paga1</p>
+    <p id="msg1">this is paga2</p>
+    <button id="btn">Swap</button>
+</body>
+</html>

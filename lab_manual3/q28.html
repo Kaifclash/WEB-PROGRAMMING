@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="clg">Istar</p>
+    <p id="dept">Computer Sceince</p>
+    <button onclick="swap();">Swap</button>
+    <script>
+        function swap() {
+            let a = document.getElementById("clg");
+            let b = document.getElementById("dept");
+            let t = a.innerHTML;
+            a.innerHTML = b.innerHTML;
+            b.innerHTML = t;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Href</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+    <p>this is link for google<br>
+        <a href="https://www.google.com"> google link</a></p>
+    <button>hide link</button>
+    <button id="btn">show link</button>
+
+
+
+    <script>
+        $(document).ready(function() {
+
+            $("button").click(function() {
+                $("[href]").hide();
+            });
+
+
+            $("#btn").click(function() {
+                $("[href]").show();
+            });
+
+        });
+    </script>
+</body>
+
+</html>

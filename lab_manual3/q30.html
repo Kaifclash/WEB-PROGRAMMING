@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+
+
+        <form action="#">
+            <label>Enter the 1 number</label><br>
+            <input type="number" id="val1"><br>
+            <label>Enter the 2 number</label><br>
+            <input type="number" id="val2"><br>
+            <label>Answer</label><br>
+            <input type="number" id="ans"><br><br>
+            <button onclick="add();">Add</button>
+            <button onclick="sub();">Sub</button>
+            <button onclick="mul();">Multi</button>
+            <button onclick="div();">Div</button>
+        </form>
+    </center>
+    <script>
+        let a, b;
+
+        function getvalue() {
+            a = Number(document.getElementById("val1").value);
+            b = Number(document.getElementById("val2").value);
+        }
+
+        function add() {
+            getvalue();
+            let n = document.getElementById("ans").value = a + b;
+        }
+
+        function sub() {
+            getvalue();
+            let n = document.getElementById("ans").value = a - b;
+        }
+
+        function mul() {
+            getvalue();
+            let n = document.getElementById("ans").value = a * b;
+        }
+
+        function div() {
+            getvalue();
+            let n = document.getElementById("ans").value = a / b;
+        }
+    </script>
+</body>
+
+</html>

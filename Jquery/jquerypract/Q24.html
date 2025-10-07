@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+    $("#navbar li").mouseenter(function() {
+        $(this).css({
+            "background-color": "orange",
+            "color": "black"
+        });
+    });
+
+    $("#navbar li").mouseleave(function() {
+        $(this).css({
+            "background-color": "#333",
+            "color": "white"
+        });
+    });
+});
+
+    </script>
+    <style>
+        #navbar {
+    list-style: none;
+    display: flex;
+    background-color: #333;
+    padding: 10px;
+}
+
+#navbar li {
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+#navbar li:hover {
+    
+    /* color:aquamarine; */
+}
+
+    </style>
+</head>
+<body>
+    <ul id="navbar">
+    <li>Home</li>
+    <li>About</li>
+    <li>Services</li>
+    <li>Contact</li>
+</ul>
+
+  <h1>Welcome to My Website</h1>
+<p>Explore, learn, and enjoy a collection of cool web projects and ideas.</p>
+
+</body>
+</html>

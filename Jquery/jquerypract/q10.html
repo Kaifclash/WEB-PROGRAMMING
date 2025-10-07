@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #panel{
+            background-color: red;
+            height: 120px;
+            width: 120px;
+        }
+        body{
+            
+            margin-left: 550px;
+            
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#fi").click(function(){
+                $("#panel").fadeIn("slow");
+            });
+
+             $("#fo").click(function(){
+                $("#panel").fadeOut("slow");
+            });
+
+             $("#ft").click(function(){
+                $("#panel").fadeToggle("slow");
+            });
+
+             $("#fto").click(function(){
+                $("#panel").fadeTo("slow",0.15); //opacity
+            });
+
+            
+
+        });
+    </script>
+</head>
+<body>
+    <div id="panel">
+
+    </div><br><br>
+    
+    <button id="fi">fadeIn</button> 
+    <button id="fo">fadeOut</button> 
+    <button id="ft">fadeToggle</button> 
+    <button id="fto">fadeto</button> 
+   
+</body>
+</html>

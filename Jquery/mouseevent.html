@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+            //mouse enter
+            $("#p1").mouseenter(function(){
+                alert("u enter to para p1");
+            });
+
+            //mouse leave
+            $("#p1").mouseleave(function(){
+                alert("you left he para");
+            });
+
+            //mouse down
+            $("#p1").mousedown(function(){
+                alert("mousedown event occurs");
+            });
+
+            $("#p1").mouseup(function(){
+                $("#p1").hide();
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <p id="p1"> enter the para!!!!</p>
+</body>
+</html>

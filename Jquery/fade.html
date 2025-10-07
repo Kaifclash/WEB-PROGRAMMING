@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#fin").click(function(){
+                $("#div1").fadeIn();
+                $("#div2").fadeIn();
+            });
+
+            $("#Fout").click(function(){
+                $("#div2").fadeOut();
+                $("#div1").fadeOut();
+            });
+
+
+            $("#ft").click(function(){
+                $("#div3").fadeToggle();
+                $("#div2").fadeToggle("slow");
+                $("#div1").fadeToggle(3000);
+
+            });
+        });
+    </script>
+    <style>
+       
+        #div1{
+            width:100px;
+            height: 100px;
+            background-color: red;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            position: relative; 
+            margin-left: 640px;
+        }
+        h1{
+            text-align: center;
+        }
+        #divm{
+            text-align: center; 
+         }
+
+        #div2{
+            width:100px;
+            height: 100px;
+            background-color: green;
+            
+            align-items: center;
+            justify-content: center;
+            position: relative; 
+            margin-left:640px;
+
+        }
+        #div3{
+            width:100px;
+            height: 100px;
+            background-color:yellow;
+            display: none; 
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            margin-left: 640px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fading Effects</h1>
+    <div id="divm">
+
+
+        <h3>fadeIn the box</h3>  
+        <button id="fin">fadeIn</button>
+        <br><br>
+        <div id="div1"></div>
+
+        
+        <h3>FadeOut the box</h3>
+        <button id="Fout">FadeOut</button>
+        <br><br>
+        <div id="div2"></div>
+
+        <h3>fadeToggle the box</h3>
+        <button id="ft">FadeToggle</button>
+        <br><br>
+        <div id="div3"></div>
+    </div>
+
+</body>
+</html>

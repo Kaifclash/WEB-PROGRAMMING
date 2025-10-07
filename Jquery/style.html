@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        div {
+            text-align: center;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <p>jquery is hard to learn??</p>
+        <br><br>
+        <button>yes</button>
+        <button>no</button>
+    </div>
+    <script>
+        $(document).ready(function() {
+            $("button").eq(0).click(function() {
+                $(this).css({
+                    "background-color": "green",
+                    "color": "white"
+                });
+            });
+
+            $("button").eq(1).click(function() {
+                $(this).css({
+                    "background-color": "red",
+                    "color": "white"
+                });
+            });
+
+
+        });
+    </script>
+</body>
+
+</html>

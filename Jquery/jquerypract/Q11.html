@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        #panel{
+            background-color: red;
+            height: 120px;
+            width: 120px;
+        }
+        body{
+            
+            margin-left: 550px;
+            
+        }
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#fi").click(function(){
+                $("#panel").slideUp("slow");
+            });
+
+             $("#fo").click(function(){
+                $("#panel").slideDown("slow");
+            });
+
+             $("#ft").click(function(){
+                $("#panel").slideToggle("slow");
+            });
+
+            
+
+            
+
+        });
+    </script>
+</head>
+<body>
+    <div id="panel">
+
+    </div><br><br>
+    
+    <button id="fi">slideup</button> 
+    <button id="fo">slidedown</button> 
+    <button id="ft">slideToggle</button> 
+    
+   
+</body>
+</html>

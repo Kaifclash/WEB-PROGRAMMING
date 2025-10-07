@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+
+</head>
+
+<body>
+    <h2>this is first jquery example</h2>
+    <!-- hiding by element -->
+    <p> Hide me please!!</p>
+    <!-- hiding by id -->
+    <p id="p1">why not me let me also hide!!</p>
+    <!-- hiding by class -->
+    <p class="p2">Let me in guys hehehe!!</p>
+
+    <button>hide element!!</button>
+    <button id="button1">hide id para!!</button>
+    <button class="button2">hide class para!!</button>
+
+    <script>
+        $(document).ready(function() {
+
+            //using by element
+            $("button").eq(0).click(function() {
+                $("p").eq(0).hide();
+            });
+
+            //using id
+            $("#button1").click(function() {
+                $("#p1").hide();
+            });
+
+            //using class
+            $(".button2").click(function() {
+                $(".p2").hide();
+
+            });
+
+
+
+        });
+    </script>
+</body>
+
+
+</html>
